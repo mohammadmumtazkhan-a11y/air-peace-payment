@@ -56,21 +56,22 @@ const CheckoutView = ({ onNext }) => {
                     <span style={{ color: '#64748b', fontWeight: '500' }}>Paying to</span>
                     <span style={{ fontWeight: '600', color: '#1e293b' }}>Air Peace via PLAID</span>
                 </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '1rem' }}>
-                    <span style={{ color: '#64748b', fontWeight: '500', flexShrink: 0 }}>Reference</span>
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', minWidth: 0 }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', alignItems: 'flex-start' }}>
+                    <span style={{ color: '#64748b', fontWeight: '500' }}>Reference</span>
+                    <div style={{ width: '100%' }}>
                         <span style={{
                             fontWeight: '700',
                             fontFamily: 'monospace',
                             letterSpacing: '1px',
                             color: '#334155',
                             background: '#e2e8f0',
-                            padding: '4px 8px',
-                            borderRadius: '4px',
+                            padding: '8px 12px',
+                            borderRadius: '6px',
                             wordBreak: 'break-all',
-                            fontSize: '0.9rem',
-                            lineHeight: '1.2',
-                            textAlign: 'right'
+                            fontSize: '1rem',
+                            display: 'block',
+                            width: '100%',
+                            textAlign: 'center'
                         }}>BNSCD1234567788TG</span>
                     </div>
                 </div>
