@@ -1,0 +1,2 @@
+modules = ["nodejs-18"]
+run = "npm run dev -- --host"
