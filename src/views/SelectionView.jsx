@@ -15,12 +15,12 @@ const SelectionView = ({ onProceed }) => {
             {/* Flight Details Header */}
             <div style={{
                 background: 'rgba(255, 255, 255, 0.5)',
-                padding: '1.5rem',
+                padding: '1rem',
                 borderRadius: 'var(--radius-md)',
-                marginBottom: '2rem',
+                marginBottom: '1.5rem',
                 border: '1px solid rgba(0, 51, 153, 0.1)'
             }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.8rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                         <div>
                             <div style={{ fontSize: '1.2rem', fontWeight: '700', color: 'var(--color-primary)' }}>LOS</div>
@@ -52,15 +52,15 @@ const SelectionView = ({ onProceed }) => {
             </div>
 
             {/* Total Amount */}
-            <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-                <p style={{ color: 'var(--color-text-muted)', marginBottom: '0.5rem' }}>Total Amount</p>
-                <h2 style={{ fontSize: '2.5rem', fontWeight: '700', color: 'var(--color-primary)' }}>
+            <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
+                <p style={{ color: 'var(--color-text-muted)', marginBottom: '0.2rem' }}>Total Amount</p>
+                <h2 style={{ fontSize: '2rem', fontWeight: '700', color: 'var(--color-primary)' }}>
                     ₦ 1,250,400
                 </h2>
             </div>
 
             {/* Payment Methods */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', marginBottom: '2rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', marginBottom: '1.5rem' }}>
                 {methods.map((method) => (
                     <div
                         key={method.id}

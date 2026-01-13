@@ -7,8 +7,8 @@ const PaymentCard = ({ children, className = '' }) => {
             style={{
                 width: '100%',
                 maxWidth: '480px',
-                padding: '2.5rem',
-                margin: '2rem auto',
+                padding: '2rem',
+                margin: '1rem auto',
                 position: 'relative',
                 display: 'flex',
                 flexDirection: 'column',
