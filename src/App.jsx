@@ -33,7 +33,7 @@ function App() {
   };
 
   return (
-    <div className="app-container" style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+    <div className="app-container" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       {/* Background Decor */}
       <div style={{ position: 'fixed', top: '-20%', left: '-10%', width: '100vw', height: '100vh', zIndex: -1, background: 'radial-gradient(circle at 10% 20%, rgb(240, 249, 255) 0%, rgb(255, 255, 255) 90%)' }}></div>
 
@@ -45,26 +45,24 @@ function App() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'center', // Center vertically
-        overflow: 'hidden',
-        padding: '0 1rem'
+        justifyContent: 'center',
+        padding: '2rem 1rem' // Add breathing room
       }}>
 
-        {/* Helper text - hide on small screens if needed, or keep discrete */}
-        <div style={{ marginBottom: '0.5rem', fontSize: '0.7rem', color: '#94a3b8' }}>
+        {/* Helper text */}
+        <div style={{ marginBottom: '1rem', fontSize: '0.8rem', color: '#94a3b8', opacity: 0.7 }}>
           State: {currentStep}
         </div>
 
         {currentStep === 'mobile_sim' ? (
-          /* Mobile Flow is standalone (simulated phone) */
-          <div className="animate-fade-in-up" style={{ transform: 'scale(0.9)', transformOrigin: 'top center' }}>
-            {/* Scaled down slightly to fit */}
-            <h2 style={{ textAlign: 'center', marginBottom: '0.5rem', color: 'var(--color-primary)', fontSize: '1rem' }}>Simulating Mobile Device</h2>
+          /* Mobile Flow */
+          <div className="animate-fade-in-up">
+            <h2 style={{ textAlign: 'center', marginBottom: '1.5rem', color: 'var(--color-primary)', fontSize: '1.2rem', fontWeight: '600' }}>Simulating Mobile Device</h2>
             <MobileFlow onComplete={handlePaymentComplete} />
           </div>
         ) : (
           /* Desktop Flow Container */
-          <PaymentCard className="responsive-card">
+          <PaymentCard>
             <div style={{ width: '100%' }}>
               {currentStep === 'selection' && (
                 <SelectionView onProceed={handleProceedToCheckout} />
