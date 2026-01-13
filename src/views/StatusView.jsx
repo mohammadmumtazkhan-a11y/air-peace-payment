@@ -10,17 +10,18 @@ const StatusView = ({ onSwitchToMobile }) => {
             <ProgressBar currentStep={1} />
 
             <div style={{
-                background: 'rgba(0, 51, 153, 0.05)',
+                background: '#f8fafc',
                 padding: '1.5rem',
-                borderRadius: 'var(--radius-sm)',
-                marginTop: '2rem',
+                borderRadius: '12px', // Consistency
+                border: '1px solid #e2e8f0',
+                marginTop: '1.5rem', // Match spacing
                 display: 'flex',
                 alignItems: 'start',
                 gap: '1rem',
                 textAlign: 'left'
             }}>
-                <Info color="var(--color-primary)" size={24} style={{ flexShrink: 0, marginTop: '2px' }} />
-                <p style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)', lineHeight: '1.5' }}>
+                <Info color="#003399" size={24} style={{ flexShrink: 0, marginTop: '2px' }} />
+                <p style={{ fontSize: '0.9rem', color: '#64748b', lineHeight: '1.5' }}>
                     Your transaction progress will be displayed here while you complete the payment process on your mobile phone.
                 </p>
             </div>
