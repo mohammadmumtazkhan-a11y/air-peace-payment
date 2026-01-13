@@ -156,23 +156,24 @@ const MobileFlow = ({ onComplete }) => {
 
     return (
         <div style={{
-            width: '100%',
-            maxWidth: '360px',
+            width: '300px', // Narrower, more realistic prop
+            height: '580px', // Fixed height
             margin: '0 auto',
             background: 'white',
-            minHeight: '600px',
-            borderRadius: '24px',
-            boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
+            borderRadius: '30px',
+            boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
             border: '8px solid #334155',
             overflow: 'hidden',
-            position: 'relative'
+            position: 'relative',
+            display: 'flex',
+            flexDirection: 'column'
         }}>
             {/* Phone Notion Bar */}
             <div style={{ position: 'absolute', top: '0', left: '0', right: '0', height: '24px', background: '#334155', display: 'flex', justifyContent: 'center' }}>
                 <div style={{ width: '40%', height: '100%', background: 'black', borderBottomLeftRadius: '12px', borderBottomRightRadius: '12px' }}></div>
             </div>
 
-            <div style={{ paddingTop: '32px', height: '100%' }}>
+            <div style={{ paddingTop: '32px', height: '100%', overflowY: 'auto', scrollbarWidth: 'none' }}>
                 {step === 'landing' && <MobileLanding />}
                 {step === 'bank-select' && <BankSelect />}
                 {step === 'login' && <Login />}
