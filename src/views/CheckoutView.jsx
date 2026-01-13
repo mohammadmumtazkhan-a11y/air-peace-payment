@@ -20,40 +20,46 @@ const CheckoutView = ({ onNext }) => {
     return (
         <div className="animate-fade-in-up" style={{ textAlign: 'center' }}>
             {/* Timer Badge */}
-            <div style={{ marginBottom: '1.5rem', display: 'flex', justifyContent: 'center' }}>
+            <div style={{ marginBottom: '2rem', display: 'flex', justifyContent: 'center' }}>
                 <div style={{
                     display: 'inline-flex',
                     alignItems: 'center',
-                    gap: '0.5rem',
-                    color: 'var(--color-text-main)',
-                    fontWeight: '600',
-                    fontSize: '0.9rem'
+                    gap: '0.6rem',
+                    background: 'rgba(212, 5, 17, 0.1)', // Light red background
+                    padding: '0.5rem 1rem',
+                    borderRadius: '20px',
+                    color: 'var(--color-accent)', // Red text
+                    fontWeight: '700',
+                    fontSize: '0.95rem'
                 }}>
-                    <Clock size={16} />
-                    You have <span style={{ color: 'var(--color-accent)' }}>{formatTime(timeLeft)}</span> mins make payment
+                    <Clock size={18} />
+                    <span>{formatTime(timeLeft)} mins remaining</span>
                 </div>
             </div>
 
             {/* Details Box */}
             <div style={{
-                background: 'rgba(241, 245, 249, 0.5)',
-                padding: '1rem 1.5rem',
-                borderRadius: 'var(--radius-sm)',
-                marginBottom: '2rem',
-                textAlign: 'left'
+                background: '#f8fafc',
+                padding: '1.5rem 2rem',
+                borderRadius: '12px',
+                marginBottom: '2.5rem',
+                textAlign: 'left',
+                border: '1px solid #e2e8f0'
             }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.8rem', alignItems: 'center' }}>
-                    <span style={{ color: 'var(--color-text-muted)', fontSize: '1.1rem', fontWeight: 'bold' }}>Total</span>
-                    <span style={{ fontWeight: '700', fontSize: '1.2rem', color: 'var(--color-text-main)' }}>£ 550.00</span>
+                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem', alignItems: 'center' }}>
+                    <span style={{ color: '#64748b', fontSize: '1rem', fontWeight: '500' }}>Total Amount</span>
+                    <span style={{ fontWeight: '800', fontSize: '1.4rem', color: '#0f172a' }}>£ 550.00</span>
                 </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.8rem' }}>
-                    <span style={{ color: 'var(--color-text-muted)', fontWeight: 'bold' }}>Paying to</span>
-                    <span style={{ fontWeight: '600', color: 'var(--color-text-muted)' }}>Air Peace via PLAID</span>
+                <div style={{ width: '100%', height: '1px', background: '#e2e8f0', marginBottom: '1rem' }}></div>
+
+                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
+                    <span style={{ color: '#64748b', fontWeight: '500' }}>Paying to</span>
+                    <span style={{ fontWeight: '600', color: '#1e293b' }}>Air Peace via PLAID</span>
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span style={{ color: 'var(--color-text-muted)', fontWeight: 'bold' }}>Reference</span>
+                    <span style={{ color: '#64748b', fontWeight: '500' }}>Reference</span>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                        <span style={{ fontWeight: '700', fontFamily: 'monospace', letterSpacing: '0.5px', color: 'var(--color-text-muted)' }}>BNSCD1234567788TG</span>
+                        <span style={{ fontWeight: '700', fontFamily: 'monospace', letterSpacing: '1px', color: '#334155', background: '#e2e8f0', padding: '2px 6px', borderRadius: '4px' }}>BNSCD1234567788TG</span>
                     </div>
                 </div>
             </div>
