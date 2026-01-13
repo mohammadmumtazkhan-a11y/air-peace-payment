@@ -33,20 +33,16 @@ function App() {
   };
 
   return (
-    <div className="app-container" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+    <div className="app-container" style={{ minHeight: '100vh', position: 'relative' }}>
       {/* Background Decor */}
-      <div style={{ position: 'fixed', top: '-20%', left: '-10%', width: '100vw', height: '100vh', zIndex: -1, background: 'radial-gradient(circle at 10% 20%, rgb(240, 249, 255) 0%, rgb(255, 255, 255) 90%)' }}></div>
+      <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1, background: 'radial-gradient(circle at 10% 20%, rgb(240, 249, 255) 0%, rgb(255, 255, 255) 90%)' }}></div>
 
       <Header />
 
       <main style={{
-        flex: 1,
         width: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: '2rem 1rem' // Add breathing room
+        padding: '2rem 1rem',
+        paddingBottom: '4rem' // Extra space at bottom
       }}>
 
         {/* Helper text */}
